@@ -97,6 +97,31 @@ print(b)
 # print("Temparature Matrix:\n",lab_monitor_sensor)
 # print("Maintanance Matrix:\n",maintanance)
 
+# Datatypes
+import numpy as np
+array1=np.array([1,2,3,4,5,6])
+print(array1.dtype)
+print(array1)
+new_array=array1.astype(float)
+print(new_array)
+arr=np.array([12,34,56,78])
+print(arr.dtype)
+print(arr)
+arr2=arr.astype(np.float32)
+print(arr2.dtype)
+print(arr2)
+
+import numpy as np
+arr=np.array(["100","200","300"])
+print(arr.dtype)
+new_array=arr.astype(float)
+print(new_array)
+print(new_array.dtype)
+print(new_array+50)
+print(new_array)
+new_array2=arr.astype(int)
+print(new_array2)
+print(new_array2.dtype)
 
 
 
