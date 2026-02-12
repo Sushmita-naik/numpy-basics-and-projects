@@ -61,7 +61,21 @@ new_marks2=Marks*1.05
 print("The marks after multiplying 1.05 is:",new_marks2)
 percentage=(Marks/total)*100
 print("The percentage of the marks is:",percentage)
+
+# STOCK PRICE ANALYZER
+import numpy as np
+price=np.array([100,105,98,110,115,120])
+profit=price-price[0]
+print("Profit compared to day 1:",profit)
+projected=price*1.05
+print("5% growth projection:",projected)
+difference=price[1:]-price[:-1]
+print("The daily price change is:",difference)
+overall_growth=((price[-1]-price[0])/price[0]*100)
+print("The overall % growth:",overall_growth)
+
 minimum_marks=Marks.min()
 print("The minimum mark is:",minimum_marks)
 maximum_marks=Marks.max()
 print("the maximum marks is:",maximum_marks)
+
