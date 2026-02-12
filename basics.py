@@ -124,5 +124,28 @@ print(new_array2)
 print(new_array2.dtype)
 
 
+# arithmatic operations in numpy
+import numpy as np
+array=np.array([1,2,3,4,5,6,7])
+print(array+7)
+print(array*5)
+print(array-9)
+print(array/4)
+
+# for 1d
+import numpy as np
+array=np.array([1,2,3,4,5])
+print(array*array)
+ 
+# for 2d
+array=np.array([
+    [1,2,3,4,5,6],
+    [7,8,9,10,11,15]
+])
+print(array+5)
+print(array*array)
+print(array-5)
+
+
 
 
