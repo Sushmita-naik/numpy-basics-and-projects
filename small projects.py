@@ -1,22 +1,22 @@
-# import numpy as np
-# weekly_tracker=np.zeros(7)
-# print("empty tracker is:",weekly_tracker)
-# # weekly_tracker[:]=[2,3,4,5,6,2,1]
-# # print(weekly_tracker)
-# weekly_tracker[0]=2
-# weekly_tracker[1]=3
-# weekly_tracker[2]=4
-# weekly_tracker[3]=5
-# weekly_tracker[4]=6
-# weekly_tracker[5]=2
-# weekly_tracker[6]=1
-# print("Weekly tracker is:",weekly_tracker)
-# total=np.sum(weekly_tracker)
-# print("The total study hours are:",total)
-# average=np.mean(weekly_tracker)
-# print("The average study hours are:",average)
-# best_day=np.argmax(weekly_tracker)
-# print("the best study hour is:",best_day)
+import numpy as np
+weekly_tracker=np.zeros(7)
+print("empty tracker is:",weekly_tracker)
+ weekly_tracker[:]=[2,3,4,5,6,2,1]
+ print(weekly_tracker)
+weekly_tracker[0]=2
+weekly_tracker[1]=3
+weekly_tracker[2]=4
+weekly_tracker[3]=5
+weekly_tracker[4]=6
+weekly_tracker[5]=2
+weekly_tracker[6]=1
+print("Weekly tracker is:",weekly_tracker)
+total=np.sum(weekly_tracker)
+print("The total study hours are:",total)
+average=np.mean(weekly_tracker)
+print("The average study hours are:",average)
+best_day=np.argmax(weekly_tracker)
+print("the best study hour is:",best_day)
 
 import numpy as np
 Balance_analyzer=np.zeros(10)
@@ -33,3 +33,35 @@ count=np.sum(days_balance)
 print("The balance which is > 5000 is:",count)
 daily_deposits[daily_deposits>10000]=10000
 print("The daily deposits replaced by 10000:",daily_deposits)
+
+
+# arithmatic operators
+import numpy as np
+salary=np.array([25000,30000,28000,35000,40000])
+new_salary=salary+(salary*0.10)
+print("Salary after adding 10% :",new_salary)
+deduction_salary=new_salary-(new_salary*0.05)
+print("Salary after adding 5% discount:",deduction_salary)
+total1=np.sum(deduction_salary)
+print("The total salary amount is from deduction salary is :",total1)
+total2=np.sum(salary)
+print("The total salary amount is from salary is:",total2)
+avg=np.mean(salary)
+print("the avg salary amount is:",avg)
+extra_salary=total1-total2
+print("The comapany is paying extra money that is :",extra_salary)
+
+import numpy as np
+Marks=np.array([45,60,72,88,95])
+new_marks1=Marks+5
+print("The new marks after adding 5 grace marks is:",new_marks1)
+total=np.sum(Marks)
+print("The total marks is:",total)
+new_marks2=Marks*1.05
+print("The marks after multiplying 1.05 is:",new_marks2)
+percentage=(Marks/total)*100
+print("The percentage of the marks is:",percentage)
+minimum_marks=Marks.min()
+print("The minimum mark is:",minimum_marks)
+maximum_marks=Marks.max()
+print("the maximum marks is:",maximum_marks)
