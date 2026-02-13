@@ -147,5 +147,16 @@ print(array*array)
 print(array-5)
 
 
+# shapes in numpy
+import numpy as np
+array= np.array([1,2,3,4])
+print(array.shape)
+array2=array.reshape(2,2)
+print(array2)
+print(array2.shape)
+print(array2.ndim)
+arr=np.array([1,2,3,4],ndmin=5)
+print(arr)
+print(arr.reshape(-1))
 
 
