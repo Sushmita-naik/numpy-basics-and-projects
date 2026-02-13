@@ -107,3 +107,43 @@ above_avg=items>avg
 print("the days above average is:",above_avg)
 
 
+# shape and reshape
+import numpy as np
+student_seat=np.array([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60])
+reshape_seats=student_seat.reshape(6,10)
+print("The student seat after replacing is:\n",reshape_seats)
+print(reshape_seats.ndim)
+print(reshape_seats.shape)
+reshape_3d=reshape_seats.reshape(3,2,10)
+print("The 3d array is:\n",reshape_3d)
+
+import numpy as np
+values=np.array([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16])
+reshape=values.reshape(4,4)
+print("The image after reshaping into 4x4:\n",reshape)
+reshape_2=reshape.reshape(2,2,4)
+print("The dimenssion is :",reshape.ndim)
+print("The image after reshaping 2x2x4:\n",reshape_2)
+print("The image dimension after reshaping:\n",reshape_2.ndim)
+
+import numpy as np
+sales_cube=np.arange(1,61)
+print("The sales cube is:\n",sales_cube)
+reshape=sales_cube.reshape(3,4,5)
+print("The sales 3d array is:\n",reshape)
+print(reshape.ndim)
+total_elem=np.sum(reshape)
+print("The total elements are:\n",total_elem)
+print(reshape.ndim)
+
+
+import numpy as np
+records=np.arange(1,121)
+print("The hospital records are:\n",records)
+reshape=records.reshape(2,3,4,5)
+print("The record after reshaping is:\n",reshape)
+print("The shape is:\n",reshape.shape)
+print("The dimenssion is:",reshape.ndim)
+print("Building 1, Floor 2 data:\n",reshape[0, 1])
+
+
