@@ -73,9 +73,19 @@ difference=price[1:]-price[:-1]
 print("The daily price change is:",difference)
 overall_growth=((price[-1]-price[0])/price[0]*100)
 print("The overall % growth:",overall_growth)
-
 minimum_marks=Marks.min()
+
+# arithmatic functions
+import numpy as np
+steps=np.array([4500,8000,6200,10000,3000,7500,9000])
+print("The minimum step is:",min(steps))
+print("The maximum step is:",max(steps))
+print("the lowest steps of the day is:",np.argmin(steps))
+print("the highest step of the day is:",np.argmax(steps))
+print("the total steps are:",np.cumsum(steps))
+print("the square root of the steps are:",np.sqrt(steps))
 print("The minimum mark is:",minimum_marks)
 maximum_marks=Marks.max()
 print("the maximum marks is:",maximum_marks)
+
 
