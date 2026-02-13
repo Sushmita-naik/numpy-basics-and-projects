@@ -88,4 +88,22 @@ print("The minimum mark is:",minimum_marks)
 maximum_marks=Marks.max()
 print("the maximum marks is:",maximum_marks)
 
+import numpy as np
+items=np.array([120,150,90,200,170,80,220,160,140,130])
+print("The best production is :",np.max(items)," and the day is:", np.argmax(items))
+print("The worst production is :",np.min(items)," and the day is:", np.argmin(items))
+print("the total cost of the prices are:",np.cumsum(items))
+print("The sqaure root of the production value is:",np.sqrt(items))
+max_item=np.max(items)
+print("The maximum value of the item is:",max_item)
+difference=max_item-items
+print("The difference from maximum is:",difference)
+total_value=np.sum(items)
+print("the total values of the items are:",total_value)
+percentage=(items/total_value)*100
+print("The percentage contribution is:",percentage)
+avg=np.mean(items)
+above_avg=items>avg
+print("the days above average is:",above_avg)
+
 
