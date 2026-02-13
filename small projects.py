@@ -147,3 +147,47 @@ print("The dimenssion is:",reshape.ndim)
 print("Building 1, Floor 2 data:\n",reshape[0, 1])
 
 
+import numpy as np
+marks=np.arange(1,251)
+marks_2d=marks.reshape(50,5)
+print(marks_2d)
+subject_avg=np.mean(marks_2d,axis=0)
+print("The subject wixe average is:",subject_avg)
+student_total=np.sum(marks_2d,axis=1)
+print("The student wise total is:",student_total)
+topper=np.argmax(marks_2d)
+print("The topper is:",topper)
+hardest_subject=np.argmin(subject_avg)
+print("The hardest subject is:",hardest_subject)
+weakest_subject=np.argmin(subject_avg)
+print("The weakest subject is:",weakest_subject)
+print("Adding grace 5 marks to the weakest subject:",weakest_subject+5)
+percentage=(student_total/500)*100
+print("The percentage for each student is:",percentage)
+rank_order=np.argsort(-percentage)
+print("Ranking order (best to worst):",rank_order)
+
+# weather data analyzer
+import numpy as np
+temparature=np.arange(1,121)
+temparature_2d=temparature.reshape(30,4)
+print("Temaparature is:\n",temparature_2d)
+avg_temp=np.mean(temparature_2d,axis=1)
+print("The average temparature is:",avg_temp)
+time_avg=np.mean(temparature_2d,axis=0)
+hottest_time=np.argmax(time_avg)
+print("The hottest time of day index is:",hottest_time)
+coldest=np.min(temparature_2d)
+coldest_idx=np.argmin(temparature_2d)
+print("Coldest temparature is:",coldest)
+print("Position of the temparature is:",coldest_idx)
+trend=np.cumsum(avg_temp)
+print("The cumulative trend :",trend)
+temp_f=(temparature_2d*9/5)+32
+print("Temparature in fahrenhiet is:\n",temp_f)
+sin_wave=np.sin(temparature_2d)
+print("Simulated pattern:\n",sin_wave)
+
+
+
+
