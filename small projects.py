@@ -188,6 +188,31 @@ print("Temparature in fahrenhiet is:\n",temp_f)
 sin_wave=np.sin(temparature_2d)
 print("Simulated pattern:\n",sin_wave)
 
+# electricity consumption
+import numpy as np
+electricity_consumption=np.arange(1,8641)
+electricity_consumption3d=electricity_consumption.reshape(12,30,24)
+print("The electricity record of the house is:\n",electricity_consumption3d)
+total_electricty_per_month=np.sum(electricity_consumption3d,axis=(1,2))
+print("the total electicity consumed per month is:",total_electricty_per_month)
+daily_total=np.sum(electricity_consumption3d,axis=2)
+avg_consumption=np.mean(daily_total,axis=(1,2))
+print("the average electricity consumed per month is:",avg_consumption)
+peak_usage_hour=np.argmax(electricity_consumption3d)
+month,day,hour=np.unravel_index(peak_usage_hour,electricity_consumption3d.shape)
+print("the peak usage at = month:",month,"Day",day,"Hour:",hour)
+most_electricity=np.argmax(total_electricty_per_month)
+print("most electricity consumed month is:",most_electricity)
+bill_amount=electricity_consumption3d*6
+print("The total bill amount is:",bill_amount)
+monthly_bill_amount=total_electricty_per_month*6
+print("Monthly bill amount is:",monthly_bill_amount)
+daily_avg=np.mean(daily_total)
+highest_usage_days=daily_total>daily_avg
+print("The highest usage days are:",highest_usage_days)
+count=np.sum(highest_usage_days)
+print("The number of high usage days:",count)
+
 
 
 
