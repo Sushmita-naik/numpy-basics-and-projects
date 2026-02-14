@@ -169,4 +169,17 @@ print(array2.shape)
 print(array2.ndim)
 arr=np.array([1,2,3,4],ndmin=5)
 print(arr)
+
+
+# broadcasting in numpy
+import numpy as np
+x=np.array([[1,2,3],[1,2,3],[2,4,6]])
+print(x)
+y=np.array([[1],[2],[3]])
+print(y)
+print(x+y)
+
+
+
 print(arr.reshape(-1))
+
