@@ -213,6 +213,21 @@ print("The highest usage days are:",highest_usage_days)
 count=np.sum(highest_usage_days)
 print("The number of high usage days:",count)
 
-
+# daily expenses
+import numpy as np
+expenses=np.random.randint(100,1000,size=(40,5))
+print(expenses)
+total_category=np.sum(expenses,axis=0)
+print("The total spending per category is:",total_category)
+monthly_spending=np.sum(expenses)
+print("the total monthly spending is:",monthly_spending)
+highest_spending_Category=np.argmax(total_category)
+print("Highest spending category index is:",highest_spending_Category)
+daily_total=np.mean(expenses,axis=1)
+print("The daily totals:",daily_total)
+over_budget_days=np.sum(daily_total>3000)
+print("Number of over budget days are:",over_budget_days)
+savings=total_category[highest_spending_Category]*0.10
+print("Possible savings:",savings)
 
 
