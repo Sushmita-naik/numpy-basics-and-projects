@@ -263,3 +263,24 @@ print("The score after deducting 5%:\n",deduct_5percent)
 avg=np.mean(deduct_5percent,axis=0)
 print("the avg score per subject is:\n",avg)
 
+
+# classroom student marks
+import numpy as np
+class_room=np.arange(1,151)
+marks=class_room.reshape(30,5)
+print("The class room is:\n",marks)
+grace_marks=np.array([10,20,30,40,50])
+subject_wise=grace_marks+marks
+print("The marks after adding additional marks for each subject:\n",subject_wise)
+deduct_10percent=subject_wise*0.90
+print("The marks after deducting 10% :\n",deduct_10percent)
+performance_bonus=np.linspace(0,4,30)
+performance_bonus=performance_bonus.reshape(30,1)
+print("the perfomance after getting bonus is:\n",performance_bonus)
+weighetage_per_subject=np.array([5,6,7,8,9])
+weighetes_marks=marks+weighetage_per_subject
+print("The weightedge marks is:\n",weighetes_marks)
+subject_max=np.max(marks,axis=0)
+normalized=marks/subject_max
+print("The subject when it is divided by it's maximum is:\n",normalized)
+
