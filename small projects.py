@@ -246,3 +246,20 @@ bonus_reshape=bonus.reshape(100,1)
 final_salary=salary_after_tax+bonus_reshape
 print("Salary after addiing bonus is:",final_salary)
 
+
+# class test score
+import numpy as np
+score=np.arange(1,121)
+score_2d=score.reshape(40,3)
+print("The class test scores are:\n",score_2d)
+grace_marks=np.array([10,30,40])
+subject_grace=score_2d+grace_marks
+print("The subject wise grace marks is:\n",subject_grace)
+attendance_bonus=np.linspace(0,5,40)
+attendance_bonus=attendance_bonus.reshape(40,1)
+print("The attendence after getting bonus:\n",attendance_bonus)
+deduct_5percent=subject_grace*0.95
+print("The score after deducting 5%:\n",deduct_5percent)
+avg=np.mean(deduct_5percent,axis=0)
+print("the avg score per subject is:\n",avg)
+
