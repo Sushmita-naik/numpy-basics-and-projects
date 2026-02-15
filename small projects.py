@@ -284,3 +284,13 @@ subject_max=np.max(marks,axis=0)
 normalized=marks/subject_max
 print("The subject when it is divided by it's maximum is:\n",normalized)
 
+
+# fitness tracker
+import numpy as np
+fitness_tracker=np.arange(1,121)
+fitness_tracker=fitness_tracker.reshape(30,4)
+print("the fittenss tracker for 30 days is:\n",fitness_tracker)
+health_improvement=np.array([5.8,6.5,4.2,3.1])
+health_improvement=health_improvement*fitness_tracker
+print("the health improvement of the man is:\n",health_improvement)
+
