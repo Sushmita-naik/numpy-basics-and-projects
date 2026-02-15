@@ -231,3 +231,18 @@ savings=total_category[highest_spending_Category]*0.10
 print("Possible savings:",savings)
 
 
+# smart salary adjustment
+import numpy as np
+salary_matrix=np.arange(1,401)
+salary_matrix2d=salary_matrix.reshape(100,4)
+print(salary_matrix2d)
+increment=np.array([100,200,300,400])
+salary_after_increment=salary_matrix2d+increment
+print("The salary after gor incremented:",salary_after_increment)
+salary_after_tax=salary_after_increment*0.90
+print("Salary after adding tax:",salary_after_tax)
+bonus=np.arange(1,101)*50
+bonus_reshape=bonus.reshape(100,1)
+final_salary=salary_after_tax+bonus_reshape
+print("Salary after addiing bonus is:",final_salary)
+
