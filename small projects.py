@@ -367,3 +367,16 @@ student_perfomance[student_perfomance<50]=0
 print(student_perfomance)
 
 
+# daily step tracker using 1d array
+import numpy as np
+daily_steps=np.array([4500,8000,7600,12000,3000,9000,15000,4000,7000,10000])
+total_steps=np.sum(daily_steps)
+print("the total steps are:\n",total_steps)
+avg_steps=np.mean(daily_steps)
+print("The average step is:\n",avg_steps)
+print("Every second steps:\n",daily_steps[0:11:2])
+days_greator_8000=daily_steps>8000
+print("The days which is greator than 8000 steps are:\n",days_greator_8000)
+daily_steps[daily_steps<5000]=0
+print("The daily steps after replacing is:\n",daily_steps)
+
