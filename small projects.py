@@ -380,3 +380,17 @@ print("The days which is greator than 8000 steps are:\n",days_greator_8000)
 daily_steps[daily_steps<5000]=0
 print("The daily steps after replacing is:\n",daily_steps)
 
+# student marks table using 2d array
+import numpy as np
+student_marks_table=np.array([
+     [78, 85, 90, 88],
+     [65, 70, 72, 68],
+     [92, 89, 95, 91]
+])
+print("The marks of second student is:\n",student_marks_table[1,0:5])
+print("The marks of third subject of all students is:\n",student_marks_table[:,2]) # to select all rows except columns
+print("The first two students and first two subject are:\n",student_marks_table[0:2,0:2]) # gives the particular column and row values
+avg_per_student=np.mean(student_marks_table,axis=1)
+print("The avg marks per student is:\n",avg_per_student)
+student_marks_table[student_marks_table<70]=0
+print(student_marks_table)
