@@ -188,5 +188,12 @@ var=np.array([1,2,3,4,5])
 print(var[1])
 print(var[-1])
 
+#for 2d array
+import numpy as np
+var2=np.array([[1,2,3,5],[5,6,7,9]])
+print(var2)
+print(var2.ndim)
+print(var2[0,3])
+
 
 
