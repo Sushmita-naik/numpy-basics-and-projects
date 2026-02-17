@@ -195,5 +195,24 @@ print(var2)
 print(var2.ndim)
 print(var2[0,3])
 
+# # for 3d array
+import numpy as np
+var3=np.array([
+    [
+        [1,2,3,4,5]
+    ],
+    [
+       [4,5,6,7,8], 
+    ],
+    [
+        [12,4,5,6,7]
+    ]
+])
+                
+                
+print(var3.ndim)
+print(var3)
+print(var3[1,0,2])
+print(var3.shape)
 
 
