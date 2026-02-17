@@ -394,3 +394,16 @@ avg_per_student=np.mean(student_marks_table,axis=1)
 print("The avg marks per student is:\n",avg_per_student)
 student_marks_table[student_marks_table<70]=0
 print(student_marks_table)
+
+# school exam analyzer using 3d array
+import numpy as np
+school_exam_analyzer=np.arange(1,25)
+school_exam_analyzer=school_exam_analyzer.reshape(3,2,4)
+print(school_exam_analyzer)
+print("The all data of class 2 is:\n",school_exam_analyzer[1,0:])
+print("The exam 1 of all classes is:\n",school_exam_analyzer[:,:1])
+print("The students 4 from all exams of class 1:\n",school_exam_analyzer[0,0:])
+avg_per_class=np.mean(school_exam_analyzer,axis=(1,2))
+print("The avg marks per class is:\n",avg_per_class)
+school_exam_analyzer[school_exam_analyzer<15]=0
+print("The marks are:\n",school_exam_analyzer)
