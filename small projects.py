@@ -308,3 +308,36 @@ print("the dividing value is:\n",deviding)
 
 
 
+# online store
+import numpy as np
+online_store=np.arange(1,121)
+online_store=online_store.reshape(20,6)
+print("The online store items are:\n",online_store)
+base_revenue=np.arange(1,121)
+base_revenue=base_revenue.reshape(20,6)
+print("The base revenue is:\n",base_revenue)
+category=np.array([1.05,1.10,0.95,1.20,1.15,1.08])
+category=category*base_revenue
+print("The category proces increses is:\n",category)
+promotions=np.linspace(0,500,20)
+promotions=promotions.reshape(20,1)
+festival_revenue=base_revenue+promotions
+print("The festival boost is:\n",festival_revenue)
+total_revenue_per_day=np.sum(online_store,axis=1)
+print("The total revenue per day is:\n",total_revenue_per_day)
+total_revenue_per_category=np.sum(online_store,axis=0)
+print("The total revenue per category is:\n",total_revenue_per_category)
+best_revenue_day=np.argmax(total_revenue_per_day)
+print("The bset revenue day is:\n",best_revenue_day)
+best_performing_day=np.argmax(total_revenue_per_category)
+print("The best performing category is:\n",best_performing_day)
+maximum=np.max(festival_revenue,axis=0)
+print("The maximum is:\n",maximum)
+normalised=festival_revenue/maximum
+print("The deviding value=",normalised)
+tax=np.linspace(0.01,0.10,20)
+tax=tax.reshape(20,1)
+after_tax=festival_revenue*(1-tax)
+print("The rate after tax is:\n",after_tax)
+
+
