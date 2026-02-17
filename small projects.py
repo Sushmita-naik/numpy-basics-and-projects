@@ -340,4 +340,30 @@ tax=tax.reshape(20,1)
 after_tax=festival_revenue*(1-tax)
 print("The rate after tax is:\n",after_tax)
 
+# slicing in numpy
+# student perfomance analyzer
+import numpy as np
+student_perfomance=np.array([
+    [
+        [100,92,73,84],
+        [73,94,75,36]
+    ],
+    [
+        [82,93,44,56],
+        [76,78,80,91],
+    ],
+    [
+        [72,93,54,65],
+        [86,48,99,100]
+    ]
+])
+print(student_perfomance.shape)
+print("the marks of class 2 is:\n",student_perfomance[1])
+print("Marks of exam 1 from all classes is:\n",student_perfomance[:,0,:])
+print("The student 3 from all exams of class 1 is:\n",student_perfomance[0,:,2])
+avg=np.mean(student_perfomance,axis=(1,2))
+print("Class average is:\n",avg)
+student_perfomance[student_perfomance<50]=0
+print(student_perfomance)
+
 
