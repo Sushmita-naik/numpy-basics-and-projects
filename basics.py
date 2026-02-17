@@ -215,4 +215,60 @@ print(var3)
 print(var3[1,0,2])
 print(var3.shape)
 
+# slicing for 1d
+import numpy as np
+x=np.array([1,2,3,4])
+print(type(x))
+print(x.shape)
+print(x.ndim)
+print(x[0:]) 
+print(x[-4:-1])
+print(x[0:5:2])
+
+# for 2d array
+import numpy as np
+y=np.array([
+    [1,2,3,4,5],
+    [2,3,4,5,6],
+    [6,7,8,9,10]
+])
+print(y.ndim)
+print(y.shape)
+print(y[1,2:])
+print(y[0,0:5:2])
+print(y[2,1:6:2])
+
+# for 3d array
+import numpy as np
+A = np.arange(1,25).reshape(2,3,4)
+
+print("Full 3D Array:\n", A)
+print("Shape:", A.shape)   
+
+
+print("\nFirst layer:")
+print(A[0])
+
+print("\nSecond layer, second row:")
+print(A[1,1])
+
+print("\nSingle element:")
+print(A[1,1,2])
+
+print("\nAll layers, first row:")
+print(A[:,0,:])
+
+print("\nFirst layer, first two rows:")
+print(A[0,0:2,:])
+
+print("\nAll layers, last two columns:")
+print(A[:,:,-2:])
+
+print("\nEvery second column:")
+print(A[:,:,::2])
+
+print("\nSecond layer, all rows, last column:")
+print(A[1,:, -1])
+
+
 
