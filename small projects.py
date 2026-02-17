@@ -293,4 +293,18 @@ print("the fittenss tracker for 30 days is:\n",fitness_tracker)
 health_improvement=np.array([5.8,6.5,4.2,3.1])
 health_improvement=health_improvement*fitness_tracker
 print("the health improvement of the man is:\n",health_improvement)
+# bonus=np.linspace(0,5,30)
+# bonus=bonus.reshape(30,4)
+total_fitness=np.sum(fitness_tracker,axis=1)
+print("the total fitness score across each day is:",total_fitness)
+best_day=np.argmax(fitness_tracker,axis=0)
+print("The best day is:\n",best_day)
+worst_day=np.argmax(fitness_tracker,axis=1)
+print("The worst day is:\n",worst_day)
+max=np.max(fitness_tracker,axis=0)
+print("the maximum per each column is:\n",max)
+deviding=fitness_tracker/max
+print("the dividing value is:\n",deviding)
+
+
 
