@@ -407,3 +407,30 @@ avg_per_class=np.mean(school_exam_analyzer,axis=(1,2))
 print("The avg marks per class is:\n",avg_per_class)
 school_exam_analyzer[school_exam_analyzer<15]=0
 print("The marks are:\n",school_exam_analyzer)
+
+# fitness & academic dashboard using 1d 2d and 3d
+import numpy as np
+fitness_1d=np.array([1000,2000,3000,4000,5000,6000,4500])
+print("The fitness tracker in 1d is:\n",fitness_1d)
+fitness_2d=np.array([
+    [99,100,98],
+    [56,78,98],
+    [67,65,43]
+])
+print("The 2d array is:\n",fitness_2d)
+fitness_3d=np.arange(1,25)
+fitness_3d=fitness_3d.reshape(2,3,4)
+print("The 3d array is:\n",fitness_3d)
+highest_step=np.max(fitness_1d)
+highest_step_index=np.argmax(fitness_1d)
+print("The highest step ate the index",highest_step_index,"with the step",highest_step)
+print("the last 3 days from 1d array is:\n",fitness_1d[-3:])
+print("The subject 2 for all students are:\n",fitness_2d[:,1]) # all student so:
+avg=np.mean(fitness_2d,axis=0)
+print("The avg marks per subject is:\n",avg)
+print("The week 1 perfomance is:\n",fitness_3d[0,0:])
+print("The exercise 2 for both weeks:\n",fitness_3d[:,1,:])
+avg_3d=np.mean(fitness_3d)
+print("The overall avg of gym perfomance is:\n",avg_3d)
+fitness_3d[fitness_3d<8]=0
+print(fitness_3d)
