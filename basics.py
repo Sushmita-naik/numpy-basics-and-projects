@@ -181,5 +181,12 @@ print(x+y)
 
 
 
-print(arr.reshape(-1))
+# indexing in numpy
+# for 1d array
+import numpy as np
+var=np.array([1,2,3,4,5])
+print(var[1])
+print(var[-1])
+
+
 
