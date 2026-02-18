@@ -433,4 +433,15 @@ print("The exercise 2 for both weeks:\n",fitness_3d[:,1,:])
 avg_3d=np.mean(fitness_3d)
 print("The overall avg of gym perfomance is:\n",avg_3d)
 fitness_3d[fitness_3d<8]=0
+
+# daily followers traceker using 1d slicing
+import numpy as np
+daily_followers_growth=np.array([120, 150, 130, 200, 180, 170, 220, 210, 190, 230, 250, 240, 260, 300])
+print("The first 7 days growth are:\n",daily_followers_growth[0:7])
+print("The last 5 days growth is:\n",daily_followers_growth[9:])
+print("The growth on alternate day is:\n",daily_followers_growth[::2])
+print("The followers after replacing:\n",(daily_followers_growth[daily_followers_growth>220]))
+print("the reverse order of growth trend is:\n",daily_followers_growth[::-1])
+
 print(fitness_3d)
+
