@@ -460,3 +460,17 @@ platform[platform<150]=0
 print(platform)
 
 
+# ad campaign perfomance using 3d array
+import numpy as np
+ads=np.arange(1,25)
+ads=ads.reshape(2,3,4)
+print("The ads campaign are:\n",ads)
+print("The data for month 2 is;\n",ads[1])
+print("The platform 1 perfomance for both months is:\n",ads[:,0,:])
+print("The campaign 3 perfomance across all months and platforms is:\n",ads[:,:,2])
+avg=np.mean(ads,axis=(1,2))
+print("The avg per month is:\n",avg)
+ads_less_than_10=ads[ads<10]=0
+print("The ads is now:\n",ads_less_than_10)
+print("The only second campaign is:\n",ads[0:-3])
+
