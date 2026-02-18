@@ -433,6 +433,7 @@ print("The exercise 2 for both weeks:\n",fitness_3d[:,1,:])
 avg_3d=np.mean(fitness_3d)
 print("The overall avg of gym perfomance is:\n",avg_3d)
 fitness_3d[fitness_3d<8]=0
+print(fitness_3d)
 
 # daily followers traceker using 1d slicing
 import numpy as np
@@ -443,5 +444,19 @@ print("The growth on alternate day is:\n",daily_followers_growth[::2])
 print("The followers after replacing:\n",(daily_followers_growth[daily_followers_growth>220]))
 print("the reverse order of growth trend is:\n",daily_followers_growth[::-1])
 
-print(fitness_3d)
+# platform perfomance using 2d array slicing
+import numpy as np
+platform=np.array([
+    [200, 300, 250, 400, 500],  
+    [150, 180, 170, 210, 190], 
+    [100, 120, 140, 160, 180]
+])
+print("The enagement of youtube is:\n",platform[1])
+print("The third post engagement of all platoform\n",platform[:,2])
+print("The first 2 posts of instagram and twitter is:\n",platform[0::2,0:2])
+avg=np.mean(platform,axis=1)
+print("The avg engagements per platform is:\n",avg)
+platform[platform<150]=0
+print(platform)
+
 
