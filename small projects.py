@@ -474,3 +474,31 @@ ads_less_than_10=ads[ads<10]=0
 print("The ads is now:\n",ads_less_than_10)
 print("The only second campaign is:\n",ads[0:-3])
 
+#  even-odd row splitter
+import numpy as np
+array=np.arange(1,49)
+array=array.reshape(8,6)
+print(array)
+print("The even indexed row is:\n",array[::2])
+print("The odd indexed rows are:\n",array[1::2])
+print(array[::2,0:4:1])
+print("reverse:",array[1::2,::-1])
+
+# border extraction
+import numpy as np
+array=np.arange(1,37)
+array=array.reshape(6,6)
+print(array)
+print("Top two rows are:\n",array[0:2])
+print("The bottom row is:\n",array[4:6])
+print("Exact left column is:\n",array[:,0:3])
+print(array[:,3:])
+
+# chessboard pattern 
+import numpy as np
+array=np.arange(1,65)
+array=array.reshape(8,8)
+print(array)
+print("the black squares of chess board is:\n",array[:,::2])
+print(array[::2, ::2])
+print(array[1::2, 1::2])
