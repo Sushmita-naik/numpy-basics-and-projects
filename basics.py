@@ -310,5 +310,14 @@ array2=np.array([
                 
                 
 
+# view and copy in numpy 
+import numpy as np
+array=np.array([1,2,3,4,5,6])
+print(array)
+copy=copy.array()
+print("Copy:",copy) # in copy if we change the elements from original array then there will be change in copy array
+# view
+view=veiw.array() # but for view ther will be no change, it prints the original array only
+print("view:",view)
 
 
