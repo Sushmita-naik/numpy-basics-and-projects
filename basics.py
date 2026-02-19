@@ -270,5 +270,28 @@ print(A[:,:,::2])
 print("\nSecond layer, all rows, last column:")
 print(A[1,:, -1])
 
+# iteration statements in numpy array
+# for 1d array
+import numpy as np
+x=np.array([1,2,3,4,5,6,7])
+print(x)
+print()
+for i in x:
+    print(i)
+
+# for 2d array
+import numpy as np
+array=np.array([
+    [1,2,3,4,5,6],
+    [3,4,5,6,7,8]
+)]
+print(array)
+for i in array:
+    for j in i:
+        print(j)
+
+
+
+
 
 
