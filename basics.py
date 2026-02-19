@@ -291,7 +291,24 @@ for i in array:
         print(j)
 
 
-
+# for 3d array
+import numpy as np
+array2=np.array([
+    [
+        [1,2,3,4,5,6],
+        [2,3,4,5,6,7]
+    ],
+    [
+        [4,5,6,7,8,8],
+        [10,11,12,13,14,15]
+    ]
+    print(array2)
+    for i in array2:
+                for j in i:
+                    for k in j:
+                         print(k)
+                
+                
 
 
 
