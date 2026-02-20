@@ -349,3 +349,19 @@ print()
 print(new_array3)
 
 
+# stack function for 1d array
+import numpy as np
+array=np.array([1,2,3,4,5,6,7,8])
+array1=np.array([2,3,4,5,6,7,78,8])
+new_array=np.stack((array,array1))
+print(new_array)
+print()
+new_array1=np.dstack((array,array1))
+print(new_array1)
+print()
+new_array2=np.vstack((array,array1))
+print(new_array2)
+print()
+new_array3=np.hstack((array,array1))
+print(new_array3)
+
