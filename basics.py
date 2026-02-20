@@ -365,3 +365,43 @@ print()
 new_array3=np.hstack((array,array1))
 print(new_array3)
 
+
+# array split for 1d 
+import numpy as np
+array=np.array([1,2,3,4,56,7])
+print(array)
+new_array=np.array_split(array,4)
+print(new_array)
+print(type(new_array))
+
+# for 2d
+import numpy as np
+array=np.array([
+    [1,2,3,4,5,6,7],
+    [6,7,8,9,10,11,12],
+    [12,13,23,34,54,65,78]
+])
+print(array)
+new_array2=np.array_split(array,6)
+print(new_array2)
+
+# for 3d array
+import numpy as np
+array=np.array([
+    [
+        [1,2,3,4,5,6,7],
+        [2,3,4,5,6,7,7],
+        [6,78,9,4,3,1,6]
+    ],
+    [
+        [2,3,4,5,6,7,8],
+        [7,8,91,2,3,4,6],
+        [6,7,8,9,10,11,12]
+    ]
+])
+print(array)
+new_array=np.array_split(array,10)
+print(new_array)
+
+
+
