@@ -320,4 +320,32 @@ print("Copy:",copy) # in copy if we change the elements from original array then
 view=veiw.array() # but for view ther will be no change, it prints the original array only
 print("view:",view)
 
+# join split and concatenate functions in numpy arrays
+# join for 1d array
+import numpy as np
+array1=np.array([1,2,3,4,5,6])
+array2=np.array([3,4,5,6,7,8])
+print(array1)
+print(array2)
+new_array=np.concatenate((array1,array2))
+
+# join for 2d array
+import numpy as np
+array3=np.array([
+    [1,2,3,4,4,5,6],
+    [4,5,6,7,87,8,9],
+])
+array4=np.array([
+    [31,52,63,74,84,95,10],
+    [43,55,66,778,897,98,99],
+])
+# print(array.shape)
+# print(array.dtype)
+# print(array.ndim)
+new_array2=np.concatenate((array3,array4),axis=1)
+new_array3=np.concatenate((array3,array4),axis=0)
+print(new_array2)
+print()
+print(new_array3)
+
 
