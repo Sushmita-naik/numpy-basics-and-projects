@@ -97,3 +97,49 @@ print(np.ravel(y,order="F"))
 print(np.ravel(y,order="A"))
 print(np.ravel(y,order="C"))
 print(np.ravel(y,order="K"))
+
+
+# insert and delete functions in numpy
+# for 1d array
+import numpy as np
+array=np.array([1,2,3,4,5,6,7])
+print("Original array:",array)
+inserted_array=np.insert(array,2,30)
+print("The inserted array is:",inserted_array)
+# if i want to add float value then
+inserted_array2=np.insert(array,5,45.6) # 45.6 will not print , it will only prints 45
+print("The inserted array2 is:\n",inserted_array2)
+
+# for 2d array
+import numpy as np
+array=np.array([
+    [1,2,3,4,5,6,7],
+    [3,4,5,6,7,8,9]
+])
+print(array)
+print()
+inserted_array=np.insert(array,5,6,axis=1)
+print(inserted_array)
+print()
+inserted_array2=np.insert(array,2,10,axis=0)
+print(inserted_array2)
+print()
+# to add list
+inserting_list=np.insert(array,2,[1,1],axis=1)
+print(inserting_list)
+
+# delete functionin 1d array
+import numpy as np
+array=np.array([1,2,3,4,5,6,7])
+print(array)
+deleted_array=np.delete(array,3)
+print()
+print(deleted_array)
+
+# delete function in 2d array
+array2=np.array([
+    [1,2,3,4,5,6],
+    [4,5,6,7,8,8]
+])
+deleted_array2=np.delete(array2,5)
+print(deleted_array2)
