@@ -50,3 +50,31 @@ array=np.array([
 ])
 print(array)
 print(np.linalg.inv(array))
+
+
+# 4.Power
+import numpy as np
+array=np.array([
+    [1,2,3],
+    [3,4,5],
+    [11,12,13]
+])
+print(array)
+power_identity_matrix=np.linalg.matrix_power(array,0)
+print(power_identity_matrix)
+power_matrix=np.linalg.matrix_power(array,1)
+print(power_matrix)
+power_matrix2=np.linalg.matrix_power(array,-1)
+print(power_matrix2)
+
+# determinate of matrix
+import numpy as np
+array=np.array([
+    [1,2,3,4],
+    [5,6,7,8],
+    [11,12,13,14],
+    [34,54,65,76]
+])
+determinate_matrix=np.linalg.det(array)
+print(determinate_matrix)
+
